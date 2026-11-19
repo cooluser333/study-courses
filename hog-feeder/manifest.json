@@ -1,0 +1,27 @@
+{
+ "name": "Hog Feeder Build",
+ "short_name": "Hog Feeder",
+ "description": "Two 3-space gravity self-feeders for 18 pigs: 7 drawings, cut list, sheet layout, weld map.",
+ "start_url": "./",
+ "scope": "./",
+ "display": "standalone",
+ "background_color": "#7c2d12",
+ "theme_color": "#7c2d12",
+ "icons": [
+  {
+   "src": "icons/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "icons/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  },
+  {
+   "src": "icons/apple-touch-icon.png",
+   "sizes": "180x180",
+   "type": "image/png"
+  }
+ ]
+}

@@ -1,7 +1,7 @@
 {
  "name": "Study Courses",
  "short_name": "Courses",
- "description": "Free self-paced study courses: blueprints, welding, BMW 330i.",
+ "description": "Free self-paced study courses and build plans.",
  "start_url": "./",
  "scope": "./",
  "display": "standalone",
