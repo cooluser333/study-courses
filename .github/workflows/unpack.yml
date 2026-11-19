@@ -1,0 +1,22 @@
+name: Unpack site bundle
+on:
+  push:
+    branches: [gh-pages]
+    paths: ['site-bundle.tgz.b64']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unpack bundle into branch root
+        run: |
+          base64 -d site-bundle.tgz.b64 | tar -xzf -
+          git rm -q site-bundle.tgz.b64
+          git add -A
+          git config user.name github-actions
+          git config user.email github-actions@users.noreply.github.com
+          git commit -m "Unpack site bundle"
+          git push
