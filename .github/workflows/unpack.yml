@@ -11,8 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Unpack bundle into branch root
+      - name: Replace site with bundle contents (full sync)
         run: |
+          git ls-files | grep -v -e '^\.github/' -e '^site-bundle\.tgz\.b64$' | xargs -r git rm -q
           base64 -d site-bundle.tgz.b64 | tar -xzf -
           git rm -q site-bundle.tgz.b64
           git add -A
